@@ -5,7 +5,7 @@ import pickle
 
 st.title("Car Price Prediction App")
 
-pipe = pickle.load(open("pipe.pkl", "rb+"))
+pipe = pickle.load(open("pipe.pkl", "wb+"))
 df = pd.read_csv("finel_data.csv")
 companies = sorted(df["company"].unique())
 years = range(2000, 2027)
